@@ -25,6 +25,7 @@ html, body {
   line-height: normal;
   box-sizing: border-box;
   overflow-x: hidden;
+  min-height: 2000px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -52,7 +53,7 @@ img {
   box-sizing: border-box;
   max-width: 1170px;
   margin: 0 auto;
-  min-height: 30px;
+
 }
 input::-ms-clear {
   display: none;
@@ -101,6 +102,51 @@ input::-ms-clear {
     color: #674343;
     font-weight: bold;
     margin-top: 23px;
+  }
+  form {
+    margin-top: 29px;
+  }
+  &__label {
+    display: block;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 16px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: contain;
+      left: 20px;
+    }
+    &--name::before {
+      width: 19px;
+      height: 23px;
+      background-image: url(../img/name.svg);
+      background-repeat: no-repeat;
+    }
+    &--tel::before {
+      width: 22px;
+      height: 24px;
+      background-image: url(../img/tel.svg);
+      background-repeat: no-repeat;
+    }
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    padding-left: 52px;
+    font-size: 20px;
+    color: #a69d91;
+    border-radius: 5px;
+    border: 1px solid #a69d91;
+    outline: none;
   }
 }
 
@@ -259,10 +305,10 @@ input::-ms-clear {
 }
 
 // end btn block
-::-webkit-input-placeholder { color: #666; font-weight: 400; }
-::-moz-placeholder          { color: #666; font-weight: 400; } /* Firefox 19+ */
-:-moz-placeholder           { color: #666; font-weight: 400; } /* Firefox 18- */
-:-ms-input-placeholder      { color: #666; font-weight: 400; }
+::-webkit-input-placeholder { color: #a69d91; font-weight: 400; }
+::-moz-placeholder          { color: #a69d91; font-weight: 400; } /* Firefox 19+ */
+:-moz-placeholder           { color: #a69d91; font-weight: 400; } /* Firefox 18- */
+:-ms-input-placeholder      { color: #a69d91; font-weight: 400; }
 
 
 @import "common/slick.scss";

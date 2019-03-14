@@ -1,5 +1,70 @@
-<section class="header-bottom header">
+<section class="header header-bottom">
 	<div class="container">
-		<h2 class="title"></h2>
+		<div class="header__top">
+			<div class="header__logo">
+				<img src="./img/logo.png" alt="">
+			</div>
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#reviews">Отзывы</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#copmonents">Состав</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#order">Оплата и доставка</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__content">
+			<div class="header__about">
+				<h1 class="header__title"><span class="green">Избавьтесь от боли <span class="nowrap">и тяжести</span> в ногах</span> при варикозе <br> за 1 курс <br> применения!</h1>
+				<ul class="header__list">
+					<li class="header__item">Устраните воспаление вен</li>
+					<li class="header__item">Избавьтесь от сосудистой сетки</li>
+					<li class="header__item">Защититесь от опасных последствий</li>
+				</ul>
+			</div>
+			<div class="header__prod">
+				<img src="./img/prod.png" alt="">
+			</div>
+			<div class="form">
+				<h2 class="form__title green">Закажите<br> сейчас по акции</h2>
+				<div class="price">
+					<div class="price__old">
+						<p class="price__title price__title--old">Старая цена</p>
+						<div class="price__value price__value--old">
+							<span class="price__num price__num--old x_price__previous">1980</span>
+							<span class="price__currency price__currency--old x_currency">руб.</span>
+						</div>
+					</div>
+					<div class="price__new">
+						<p class="price__title price__title--new">Ваша цена</p>
+						<div class="price__value price__value--new">
+							<span class="price__num price__num--new x_price__current">990</span>
+							<span class="price__currency price__currency--new x_currency">руб.</span>
+						</div>
+					</div>
+				</div>
+				<form action="/submit" method="post" class="x_order_form">
+					<label class="form__label form__label--name">
+						<input class="form__input" type="text" placeholder="Моё имя" name="name" required autocomplete="name">
+					</label>
+					<label class="form__label form__label--tel">
+						<input class="form__input" type="tel" placeholder="Мой телефон" name="phone" required autocomplete="tel">
+					</label>
+					<button class="btn">
+						Заказать 
+						<span class="btn__small">со скидкой</span>
+					</button>
+				</form>
+				
+			</div>
+		</div>
+		<div class="header__leg">
+			<img src="./img/header__leg.png" alt="">
+		</div>
 	</div>
 </section>
