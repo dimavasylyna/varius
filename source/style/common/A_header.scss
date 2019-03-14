@@ -1,5 +1,103 @@
 .header {
-
+	background-image: url(../img/header__bg.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+	background-position: 50% 0px;
+	z-index: 1;
+	padding-bottom: 47px;
+	&__top {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		max-width: 531px;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+	&__logo {
+		position: relative;
+		right: 5px;
+	}
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+	&__title {
+		font-size: 58px;
+		color: #2b2d26;
+		font-weight: 400;
+		max-width: 580px;
+		margin-bottom: 65px;
+		line-height: 56px;
+		.green {
+			font-size: 64px;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 1px;
+		}
+	}
+	&__list {
+		counter-reset: section;
+	}
+	&__item {
+		font-size: 24px;
+		color: #000;
+		padding-left: 50px;
+		position: relative;
+		margin-bottom: 34px;
+		max-width: 425px;
+		line-height: 26px;
+		&::before {
+			content: ''counter(section);
+			counter-increment: section;
+			display: block;
+			position: absolute;
+			position: absolute;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url(../img/header__leaf.png);
+			background-repeat: no-repeat;
+			height: 48px;
+			width: 32px;
+			color: #fff;
+			font-size: 22px;
+			font-weight: bold;
+			top: -10px;
+			padding-left: 2px;
+		}
+	}
+	&__prod {
+		position: absolute;
+		left: calc(50% - 202px);
+		bottom: -123px;
+		width: 100%;
+		max-width: 333px;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 31px;
+			height: 30px;
+			background-image: url(../img/butterfly2.png);
+			background-repeat: no-repeat;
+			top: -121px;
+			left: 53px;
+		}
+	}
+	.form {
+		margin-left: auto;
+		position: relative;
+		left: 11px;
+		top: 5px;
+	}
+	&__leg {
+		position: absolute;
+		left: calc(50% - 17px);
+		top: 0;
+		z-index: -1;
+	}
 }
 @media screen and (max-width: 1190px){
   
