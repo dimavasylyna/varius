@@ -22,14 +22,15 @@
 	}
 }
 @media screen and (max-width: 1190px){
-  
+  .main-nav {
+  	max-width: 350px;
+  }
 }
-@media screen and (max-width: 1023px){
 
-}
-@media screen and (max-width: 767px){
-
-}
 @media screen and (max-width: 479px){
-
+	.main-nav {
+		&__link {
+			font-size: 18px;
+		}
+	}
 }

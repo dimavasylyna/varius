@@ -24,7 +24,7 @@ html, body {
   font-size: 16px;
   line-height: normal;
   box-sizing: border-box;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -52,6 +52,7 @@ img {
   box-sizing: border-box;
   max-width: 1170px;
   margin: 0 auto;
+  min-height: 30px;
 }
 input::-ms-clear {
   display: none;
