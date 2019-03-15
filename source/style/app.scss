@@ -14,6 +14,8 @@ $green: #91b529;
 * {
   box-sizing: border-box;
 }
+
+
 html, body {
   padding: 0;
   margin: 0;
@@ -25,7 +27,6 @@ html, body {
   line-height: normal;
   box-sizing: border-box;
   overflow-x: hidden;
-  min-height: 2000px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -63,6 +64,7 @@ input::-ms-clear {
   line-height: 1;
   font-weight: bold;
   text-align: center;
+  color: #2b2d26;
 }
 
 
