@@ -270,3 +270,18 @@ function postDate() {
 
 
 
+$(function() {
+    $('.reviews__list').slick({
+        slidesToShow: 3,
+        infinite: true,
+        dots: true,
+        arrows: true,
+        wariableWidth: true
+    });
+
+    // reviews__more
+    $('.reviews__more').on('click', function() {
+        $(this).parent().toggleClass('open');
+    });
+});
+
