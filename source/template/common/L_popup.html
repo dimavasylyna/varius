@@ -1,3 +1,42 @@
-<div class="popup">
-
+<div class="ever-popup-build">
+	<div class="my-popup" id="cloneThis">
+		<div class="popup">
+			<div class="popup__img">
+				<img src="./img/prod.png" alt="">
+			</div>
+			<div class="form">
+				<h2 class="form__title green">Закажите<br> сейчас по акции</h2>
+				<div class="price">
+					<div class="price__old">
+						<p class="price__title price__title--old">Старая цена</p>
+						<div class="price__value price__value--old">
+							<span class="price__num price__num--old x_price__previous">1980</span>
+							<span class="price__currency price__currency--old x_currency">руб.</span>
+						</div>
+					</div>
+					<div class="price__new">
+						<p class="price__title price__title--new">Ваша цена</p>
+						<div class="price__value price__value--new">
+							<span class="price__num price__num--new x_price__current">990</span>
+							<span class="price__currency price__currency--new x_currency">руб.</span>
+						</div>
+					</div>
+				</div>
+				<form action="/submit" method="post" class="x_order_form">
+					<label class="form__label form__label--name">
+						<input class="form__input" type="text" placeholder="Моё имя" name="name" required="" autocomplete="name">
+					</label>
+					<label class="form__label form__label--tel">
+						<input class="form__input" type="tel" placeholder="Мой телефон" name="phone" required="" autocomplete="tel">
+					</label>
+					<button class="btn">
+						Заказать 
+						<span class="btn__small">со скидкой</span>
+					</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
 </div>
+	
