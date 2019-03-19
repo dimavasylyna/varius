@@ -121,6 +121,9 @@
 		transform: translateX(-50%);
 		cursor: pointer;
 		transition: 0.3s;
+		&:hover {
+			background-color: #a4cc32;
+		}
 		&::before,
 		&::after {
 			content: '';
@@ -166,13 +169,17 @@
        border-radius: 50%;
        top: 282px;
        z-index: 10;
+       transition: 0.2s;
        &:hover {
        	background-color: #f8eee6;
+       	transition: 0.2s;
        	&::before {
        		background-color: #d8c8bb;
+       		transition: 0.2s;
        	}
        	&::after {
        		border-color: #d8c8bb;
+       		transition: 0.2s;
        	}
        }
        &::before {
