@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    
+
     // Вивід дати (+ час).
-    postDate();   
+    postDate();
 
 });
 
@@ -14,17 +14,17 @@ function postDate() {
     // Виводить у форматі на зразок "14.02.2018 14:22"
     // Працює як в порядку зростання, так і в порядку спадання (міняємо флажок нижче)
     var body = document.body,
-        postLang = body.getAttribute('data-post-lang');
+      postLang = body.getAttribute('data-post-lang');
 
     var sa = body.getAttribute('data-post-format') || 'dd.mm.yyyy',
-        msInDay = 86400000,
-        counterLength = 90,  // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
-        months, 
-        countryName = postLang ? postLang 
-            : window.country_code ? window.country_code.toLowerCase() 
-            : 'ru',  // Мова для місяців. 
-        isAbbreviated = body.getAttribute('data-post-abbreviated') ? true : false, // Скорочений варіант місяців до трьох букв
-        localDate = new Date();
+      msInDay = 86400000,
+      counterLength = 90,  // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
+      months,
+      countryName = postLang ? postLang
+        : window.country_code ? window.country_code.toLowerCase()
+          : 'ru',  // Мова для місяців.
+      isAbbreviated = body.getAttribute('data-post-abbreviated') ? true : false, // Скорочений варіант місяців до трьох букв
+      localDate = new Date();
 
     var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 
@@ -65,7 +65,7 @@ function postDate() {
             days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
             break;
     }
-                                   
+
     switch(countryName) {
         case 'it':  // Italy
             months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
@@ -112,10 +112,10 @@ function postDate() {
 
     for (var counter = 0; counter < counterLength; counter++) {
         var dateClass = "date-" + counter,
-            nodeList = document.getElementsByClassName(dateClass),
-            date = new Date(localDate.getTime() - counter * msInDay),
-            timeCounter = 0,
-            timeArray = time(nodeList/*, true*/); // Розкоментувати, якщо необхідне сортування в порядку спадання.
+          nodeList = document.getElementsByClassName(dateClass),
+          date = new Date(localDate.getTime() - counter * msInDay),
+          timeCounter = 0,
+          timeArray = time(nodeList/*, true*/); // Розкоментувати, якщо необхідне сортування в порядку спадання.
 
         timeArray = timeFormat(timeArray);
 
@@ -136,7 +136,7 @@ function postDate() {
             if (/\btime\b/.test(nodeList[i].className)) {
                 nodeList[i].innerHTML += " " + timeArray[timeCounter]; // Рядок для формату виводу часу.
                 timeCounter++;
-            } 
+            }
         }
     }
 
@@ -145,9 +145,9 @@ function postDate() {
 
     for (var counter = 0; counter < counterLength; counter++) {
         var dateClass = "date" + counter,
-            nodeList = document.getElementsByClassName(dateClass),
-            date = new Date(localDate.getTime() + counter * msInDay),
-            timeCounter = 0;
+          nodeList = document.getElementsByClassName(dateClass),
+          date = new Date(localDate.getTime() + counter * msInDay),
+          timeCounter = 0;
 
         for(var i = 0; i < nodeList.length; i++) {
             var data = nodeList[i].dataset;
@@ -176,12 +176,12 @@ function postDate() {
         else timeArray.sort(function(a, b) { return a - b; });
 
         return timeArray;
-    } 
+    }
 
     function timeRandom(statement) {
         if (statement) {
             var date = new Date(),
-                timeLimit = date.getHours() * 60 + date.getMinutes();
+              timeLimit = date.getHours() * 60 + date.getMinutes();
 
             return Math.round(0 + Math.random() * timeLimit);
         }
@@ -192,12 +192,12 @@ function postDate() {
         var array = [];
 
         for (var i = 0; i < timearray.length; i++) {
-        var htemp = Math.floor(timearray[i] / 60), mtemp = timearray[i] % 60,
-            hours = htemp < 10 ? "0" + htemp : htemp,
-            minutes = mtemp < 10 ? "0" + mtemp : mtemp; 
-        array.push(hours + ":" + minutes);  
+            var htemp = Math.floor(timearray[i] / 60), mtemp = timearray[i] % 60,
+              hours = htemp < 10 ? "0" + htemp : htemp,
+              minutes = mtemp < 10 ? "0" + mtemp : mtemp;
+            array.push(hours + ":" + minutes);
         }
-        
+
         return array;
     }
 
@@ -210,10 +210,10 @@ function postDate() {
         var innerDate = format;
 
         var dd = date.getDate(),
-            mm = date.getMonth() + 1,
-            year = date.getFullYear(),
-            month = months[mm - 1],
-            day = days[new Date(year, mm - 1, dd).getDay()];
+          mm = date.getMonth() + 1,
+          year = date.getFullYear(),
+          month = months[mm - 1],
+          day = days[new Date(year, mm - 1, dd).getDay()];
 
         dd = (dd < 10) ? ("0" + dd) : dd;
         mm = (mm < 10) ? ('0' + mm) : mm;
@@ -267,3 +267,41 @@ function postDate() {
 //       }
 //      });
 // });
+
+
+
+$(function() {
+    $('.reviews__list').slick({
+        slidesToShow: 3,
+        infinite: true,
+        dots: true,
+        arrows: true,
+        wariableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    wariableWidth: false
+                }
+            }
+        ]
+    });
+
+    // reviews__more
+    $('.reviews__more').on('click', function() {
+        $(this).parent().toggleClass('open');
+    });
+    // при прокрутці слайдер видаляємо класи open
+    $('.reviews__list').on('afterChange', function(event, slick, currentSlide){
+        $(this).find('.open').removeClass('open');
+    });
+});
