@@ -1,6 +1,18 @@
 .reviews {
 	padding-top: 73px;
-	padding-bottom: 70px;
+	padding-bottom: 59px;
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 2px;
+		background-color: $green;
+		width: 140px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	&__list {
 		margin-top: 52px;
 		max-width: 1200px;
